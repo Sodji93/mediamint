@@ -230,5 +230,89 @@
                 }
             }
         }
+
+        .faq {
+            flex-direction: column;
+            gap: 30px;
+
+            .faq-left {
+                border: none;
+                padding-left: 0;
+
+                h3 {
+                    text-align: center;
+                    @include font-set($font-size-t-25m, $line-height-t-25m, $font-weight-t-25m);
+                }
+
+                p {
+                    text-align: center;
+                    @include font-set($font-size-t-16, $line-height-t-16, $font-weight-t-16);
+                }
+
+                a {
+                    display: none
+                }
+            }
+
+            .faq-right {
+
+                .faq-item {
+
+                    .faq-question {
+
+                        p {
+                            font-size: 0;
+                            gap: 0;
+
+                            span {
+                                @include font-set($font-size-t-16m, $line-height-t-16m, $font-weight-t-16m);
+                            }
+                        }
+                    }
+
+                    .faq-answer {
+                        @include font-set($font-size-t-16, $line-height-t-16, $font-weight-t-16);
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+
+        &__nav-top {
+
+            ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        &__nav-bottom {
+            gap: 30px;
+
+            .social {
+                order: 2;
+            }
+
+            ul {
+                order: 1;
+            }
+
+            .info {
+                flex-direction: column-reverse;
+                order: 3;
+                width: 100%;
+
+                .details {
+                    width: 100%;
+                }
+
+                button {
+                    width: 100%;
+                }
+            }
+        }
     }
 }
