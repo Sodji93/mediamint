@@ -1,0 +1,234 @@
+@media (max-width: 430px) {
+    .header {
+
+        &__top {
+            display: none;
+        }
+
+        &__middle {
+
+            &-container {
+
+                .header__logo-and-search {
+                    flex: 1;
+                    justify-content: space-between;
+                }
+
+                .header__search {
+                    align-items: center;
+
+                    .search__btn {
+                        width: 40px;
+                        height: 40px;
+
+                    }
+
+                }
+
+                .header__contacts {
+
+                    .social {
+                        display: none;
+                    }
+
+                    .phone {
+                        display: none;
+                    }
+
+                    .callback-btn {
+                        display: none;
+                    }
+
+                    .callback-btn-mobile {
+                        display: flex;
+                        background-color: transparent;
+                        border: none;
+                    }
+
+                    .btn-mobile-menu {
+                        display: flex;
+                        background-color: transparent;
+                        border: none;
+                    }
+                }
+            }
+        }
+
+        &__bottom {
+            display: none;
+        }
+    }
+
+    .header__search.collapsible.is-open .search__input {
+        width: 306px;
+    }
+
+    .main {
+        margin-top: 20px;
+
+        .hero {
+
+            &__track {
+
+                .hero__slide {
+                    background-image: none;
+                    background-color: #ffffff;
+                    display: flex;
+                    flex-direction: column-reverse;
+                    padding: 0;
+
+                    .card {
+                        align-items: center;
+                        width: 100%;
+                        min-height: 453px;
+
+                        .h1 {
+                            text-align: center;
+                            width: 100%;
+                            @include font-set($font-size-h-30, $line-height-h-30, $font-weight-h-30);
+                        }
+
+                        .lead {
+                            @include font-set($font-size-t-16, $line-height-t-16, $font-weight-t-16);
+                        }
+
+                        .cta-row {
+
+                            .timer-box {
+                                background-color: #F2F2F2;
+                                width: 100%;
+                            }
+
+                            .cta-buttons {
+                                width: 100%;
+                                justify-content: center;
+                            }
+
+                            .social {
+                                width: 100%;
+                                justify-content: center;
+                            }
+                        }
+                    }
+
+                    .right {
+                        width: 345px;
+                        height: 294px;
+                        background-image: url(https://i.postimg.cc/QMdqK08g/421421432432432fdsfsdaaaaaa.webp);
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                    }
+                }
+            }
+
+            .nav {
+                inset: auto 0 6px 0;
+                justify-content: center;
+            }
+        }
+
+        .services {
+            gap: 30px;
+
+            &__description {
+                border-left: none;
+
+                .text {
+                    margin-left: 0;
+                    align-items: center;
+
+                    .top {
+
+
+                        h2 {
+                            @include font-set($font-size-t-25m, $line-height-t-25m, $font-weight-t-25m);
+                        }
+
+                        .link {
+                            display: none
+                        }
+                    }
+
+                    p {
+                        @include font-set($font-size-t-16, $line-height-t-16, $font-weight-t-16);
+                        text-align: center;
+                    }
+                }
+            }
+
+            &__list {
+                grid-template-columns: 1fr;
+
+                .item {
+
+                    .item-content {
+
+                        h3 {
+                            @include font-set($font-size-t-18m, $line-height-t-18m, $font-weight-t-18m);
+                        }
+                    }
+                }
+            }
+
+            .item-mobile {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+
+                .link-mobile {
+                    display: flex;
+                    color: #27AE60;
+                    @include font-set($font-size-t-16, $line-height-t-16, $font-weight-t-16);
+                    gap: 15px;
+                    align-items: center;
+                }
+            }
+        }
+
+        .contacts {
+            flex-direction: column-reverse;
+
+            .map {
+                iframe {
+                    width: 347px;
+                }
+            }
+
+            .info {
+                align-items: normal;
+
+                .top {
+
+                    h3 {
+                        @include font-set($font-size-t-25m, $line-height-t-25m, $font-weight-t-25m);
+                        text-align: center
+                    }
+
+                    p {
+                        @include font-set($font-size-t-16, $line-height-t-16, $font-weight-t-16);
+                        text-align: center
+                    }
+                }
+
+                .middle {
+
+                    ul {
+
+                        li {
+
+                            p {
+
+                                @include font-set($font-size-t-14, $line-height-t-14, $font-weight-t-14);
+                            }
+
+                            a {
+                                @include font-set($font-size-t-18m, $line-height-t-18m, $font-weight-t-18m);
+                                align-items: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

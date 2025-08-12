@@ -1,0 +1,382 @@
+.main {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+
+    .hero {
+        max-width: $desktop-breakpoint;
+        width: 100%;
+        padding: 0 15px;
+        position: relative;
+        overflow: hidden;
+
+        &__track {
+            display: flex;
+            will-change: transform;
+            transition: transform .6s cubic-bezier(.22, .61, .36, 1);
+            gap: 16px;
+
+            .hero__slide {
+                flex: 0 0 100%;
+                display: grid;
+                align-items: center;
+                grid-template-columns: 1.1fr 0.9fr;
+                padding: 134px clamp(16px, 6vw, 60px);
+                background-color: #F2F2F2;
+                background-image: url(https://i.postimg.cc/qMbvQzBs/IMG2313123….webp);
+                background-repeat: no-repeat;
+                background-position-x: right;
+                background-position-y: bottom;
+                background-size: contain;
+                border-radius: 5px;
+
+                .card {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+
+                    .eyebrow {
+                        color: #27AE60;
+                        @include font-set($font-size-t-14m, $line-height-t-14m, $font-weight-t-14m);
+                    }
+
+                    .h1 {
+                        color: #000000;
+                        @include font-set($font-size-h-45, $line-height-h-45, $font-weight-h-45);
+                    }
+
+                    .lead {
+                        color: #155C33;
+                        @include font-set($font-size-t-18, $line-height-t-18, $font-weight-t-18);
+                    }
+
+                    .cta-row {
+                        display: flex;
+                        gap: 20px;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        margin: 15px 0 0 0;
+                        max-width: 400px;
+
+                        .timer-box {
+                            display: flex;
+                            gap: 15px;
+                            align-items: center;
+                            background-color: #ffffff;
+                            border-radius: 5px;
+                            padding: 15px 20px;
+
+                            .timer-label {
+                                color: #155C33;
+                                @include font-set($font-size-t-14, $line-height-t-14, $font-weight-t-14);
+                                max-width: 116px;
+                            }
+
+                            .timer-time {
+                                display: flex;
+                                gap: 6px;
+
+                                .hh {
+                                    color: #27AE60;
+                                    @include font-set($font-size-h-30, $line-height-h-30, $font-weight-h-30);
+                                }
+
+                                .mm {
+                                    color: #27AE60;
+                                    @include font-set($font-size-h-30, $line-height-h-30, $font-weight-h-30);
+                                }
+
+                                .ss {
+                                    color: #27AE60;
+                                    @include font-set($font-size-h-30, $line-height-h-30, $font-weight-h-30);
+                                }
+
+                                .sep {
+                                    color: #27AE60;
+                                    @include font-set($font-size-h-30, $line-height-h-30, $font-weight-h-30);
+                                }
+                            }
+                        }
+
+                        .cta-buttons {
+                            display: flex;
+                            gap: 10px;
+
+                            .btn {
+                                cursor: pointer;
+                                @include font-set($font-size-t-16m, $line-height-t-16m, $font-weight-t-16m);
+                                color: #155C33;
+                                border: 1px solid #27AE60;
+                                border-radius: 5px;
+                                background-color: #ffffff;
+                                padding: 15px 25px;
+                                transition: background-color 0.5s ease, color 0.5s ease, border-radius 0.5s ease;
+
+                                &:hover {
+                                    background-color: #27AE60;
+                                    color: #ffffff;
+                                    border-radius: 20px;
+                                }
+                            }
+                        }
+
+                        .social {
+                            display: flex;
+                            gap: 10px;
+
+                            a {
+                                display: flex;
+                                align-items: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .nav {
+            position: absolute;
+            inset: auto 0 80px 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            pointer-events: auto;
+
+            .bullets {
+                display: flex;
+                gap: 15px
+            }
+
+            .bullet {
+                pointer-events: auto;
+                width: 10px;
+                height: 10px;
+                border-radius: 999px;
+                border: none;
+                background-color: rgba(0, 60, 85, 0.2);
+                transition: all .3s;
+
+                &:hover {
+                    background-color: rgba(0, 60, 85, 0.4);
+                }
+            }
+
+            .bullet[aria-current="true"] {
+                width: 50px;
+                height: 10px;
+                background-color: #27AE60;
+                border: none;
+            }
+        }
+    }
+
+    .services {
+        max-width: $desktop-breakpoint;
+        width: 100%;
+        padding: 0 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        &__description {
+            display: flex;
+            align-items: flex-start;
+            border-left: 5px solid #27AE60;
+
+            .text {
+                display: flex;
+                flex-direction: column;
+                margin-left: 50px;
+                gap: 15px;
+                width: 100%;
+
+                .top {
+                    display: flex;
+                    justify-content: space-between;
+
+                    h2 {
+                        color: #000000;
+                        @include font-set($font-size-h-40, $line-height-h-40, $font-weight-h-40);
+                    }
+
+                    .link {
+                        color: #27AE60;
+                        @include font-set($font-size-t-18, $line-height-t-18, $font-weight-t-18);
+                        display: flex;
+                        gap: 15px;
+                        align-items: center;
+                        transition: color 0.5s ease;
+
+                        &:hover {
+                            color: #155C33;
+                        }
+                    }
+                }
+
+                p {
+                    color: #155C33;
+                    @include font-set($font-size-t-18, $line-height-t-18, $font-weight-t-18);
+                }
+            }
+        }
+
+        &__list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+
+            .item {
+                background-color: #F2F2F2;
+                border-radius: 5px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                justify-content: space-between;
+
+                .item-content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    padding: 20px 20px 0 20px;
+
+                    h3 {
+                        color: #000000;
+                        @include font-set($font-size-t-20m, $line-height-t-20m, $font-weight-t-20m);
+                    }
+
+                    ul {
+
+                        li {
+
+                            a {
+                                color: #155C33;
+                                @include font-set($font-size-t-15, $line-height-t-15, $font-weight-t-15);
+                                transition: color .5s ease;
+
+                                &:hover {
+                                    color: #27AE60;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .bottom {
+                    display: flex;
+                    align-items: flex-end;
+                    width: 100%;
+                    justify-content: space-between;
+
+                    a {
+                        display: flex;
+
+                        svg rect {
+                            transition: fill 0.5s ease, stroke 0.5s ease;
+                        }
+
+                        &:hover svg rect:first-of-type,
+                        svg rect:first-of-type:hover {
+                            fill: #155C33;
+                        }
+                    }
+                }
+            }
+        }
+
+        .item-mobile {
+            display: none;
+
+            .link-mobile {
+                display: none;
+            }
+        }
+    }
+
+    .contacts {
+        display: flex;
+        justify-content: space-between;
+        max-width: $desktop-breakpoint;
+        width: 100%;
+        padding: 0 15px;
+        gap: 30px;
+        flex-wrap: wrap;
+
+        .map {
+            filter: grayscale(100%);
+            flex: 1;
+        }
+
+        .info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: flex-start;
+
+            .top {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                h3 {
+                    color: #000000;
+                    @include font-set($font-size-h-40, $line-height-h-40, $font-weight-h-40);
+                }
+
+                p {
+                    color: #155C33;
+                    @include font-set($font-size-t-18, $line-height-t-18, $font-weight-t-18);
+                }
+            }
+
+            .middle {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                ul {
+                    display: flex;
+                    gap: 6px;
+                    flex-wrap: wrap;
+
+                    li {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 6px;
+
+                        p {
+                            color: #155C33;
+                            @include font-set($font-size-t-14, $line-height-t-14, $font-weight-t-14);
+                        }
+
+                        a {
+                            color: #000000;
+                            @include font-set($font-size-t-25m, $line-height-t-25m, $font-weight-t-25m);
+                            transition: color 0.5s ease;
+                            display: flex;
+                            gap: 10px;
+                            align-items: flex-start;
+
+                            &:hover {
+                                color: #27AE60;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .social {
+                display: flex;
+                gap: 10px;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

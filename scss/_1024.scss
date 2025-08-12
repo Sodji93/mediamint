@@ -1,0 +1,5 @@
+@media (max-width: 1024px) {
+    .main .services__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

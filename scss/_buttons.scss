@@ -1,0 +1,16 @@
+.callback-btn {
+    cursor: pointer;
+    @include font-set($font-size-t-16m, $line-height-t-16m, $font-weight-t-16m);
+    color: #FFFFFF;
+    border: 1px solid #27AE60;
+    border-radius: 5px;
+    background-color: #27AE60;
+    padding: 15px 25px;
+    transition: background-color 0.5s ease, color 0.5s ease, border-radius 0.5s ease;
+
+    &:hover {
+        background-color: #ffffff;
+        color: #155C33;
+        border-radius: 20px;
+    }
+}
